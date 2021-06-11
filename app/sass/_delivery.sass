@@ -1,0 +1,76 @@
+.delivery
+  padding: 60px 0
+  &__row
+    margin: 0 -20px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    @media ( max-width: $md2 + 'px' )
+      justify-content: flex-start
+  &__column
+    margin-top: 15px
+    padding: 0 20px
+    flex: 0 0 345px
+  &__item
+    &-icon
+      position: relative
+      width: 35px
+      height: 35px
+      background-color: #fad163
+      border-radius: 50%
+      img
+        position: absolute
+        top: 15px
+        left: 15px
+    &-title
+      margin-top: 22px
+      font-size: 24px
+      font-weight: 600
+      line-height: 52/24*100%
+      color: #88b131
+    &-list
+      padding: 0
+      margin: 0
+      list-style-type: none
+      li
+        font-size: 15px
+        line-height: 22/15*100%
+        color: #333
+        font-weight: 400
+        padding-left: 20px
+        background: url('../images/dest/check.png') 3px 6px no-repeat
+      li.nocheck
+        background: none
+
+.delivery-page
+  padding: 30px 0 60px 0
+  &__row
+    flex-direction: column
+  &__column
+    flex: 1 1
+  &__item
+    &-title
+      margin-top: 0
+      color: #333
+    &-list
+      margin-bottom: 20px
+      li
+        line-height: 32/16*100%
+        background: url('../images/dest/check.png') 0px 10px no-repeat
+        a
+          font-size: 14px
+          font-weight: 400
+          text-decoration: underline
+          color: #88B131
+          padding-left: 35px
+          @media ( max-width: $md4 + 'px' )
+            display: block
+            padding-left: 0
+      li.nocheck
+        background: none
+        padding: 0
+        font-size: 12px
+        font-weight: 300
+  &__column:last-child &__item
+    &-list
+      margin-bottom: 0

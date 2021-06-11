@@ -1,0 +1,304 @@
+.product-gallery
+  &__image
+    position: relative
+    z-index: 1
+    width: 570px
+    height: 570px
+    @media screen and (max-width:1199px)
+      width: 480px
+      height: 480px
+    @media screen and (max-width:768px)
+      width: 400px
+      height: 400px
+    @media screen and (max-width: $md4 + 'px')
+      width: 290px
+      height: 290px
+    img
+      width: 100%
+      object-fit: cover
+    /* Ограничивающая оболочка */
+    .slick-list
+      overflow: hidden
+    /* Лента слайдов */
+    .slick-track
+      display: flex
+  &__carousel
+    width: 570px
+    height: 115px
+    margin-top: 20px
+    @media screen and (max-width:1199px)
+      width: 480px
+    @media screen and (max-width:768px)
+      width: 400px
+    @media screen and (max-width: $md4 + 'px')
+      width: 290px
+    /* Ограничивающая оболочка */
+    .slick-list
+      overflow: hidden
+    /* Лента слайдов */
+    .slick-track
+      display: flex
+    img
+      display: block
+      width: 115px
+      height: 115px
+      margin-right: 20px
+      object-fit: cover
+      @media screen and (max-width: $md4 + 'px')
+        width: 65px
+        height: 65px
+
+.product-card
+  padding-top: 40px
+  &__row
+    display: flex
+    margin: 0 -15px
+    @media ( max-width: $md3 + 'px' )
+      flex-wrap: wrap
+  &__media-column, &__info-column
+    padding: 0 15px
+  &__name
+    margin-top: 20px
+    font-size: 24px
+    line-height: 32/24*100%
+    font-weight: 400
+  &__prop
+    font-size: 18px
+    line-height: 21/18*100%
+    color: #88b131
+    font-weight: 500
+    margin-top: 20px
+  &-size
+    &__items
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -10px
+    &__item
+      font-size: 18px
+      line-height: 21/18*100%
+      font-weight: 40
+      padding: 14px 34px
+      background-color: rgba(201, 201, 201, 0.1)
+      border: 1px solid #E7E7E7
+      border-radius: 10px
+      margin: 15px 10px 0 10px
+      color: #333
+      text-decoration: none
+      &:hover
+        background: rgba(136, 177, 49, 0.1)
+        border: 1px solid #88B131
+        border-radius: 10px
+        text-decoration: none
+        color: #333
+  &-thickness
+    &__items
+      flex-wrap: wrap
+      display: flex
+      margin: 0 -7px
+    &__item
+      font-size: 12px
+      line-height: 14/12*100%
+      font-weight: 400
+      padding: 17px 7px
+      background-color: #FAFAFA
+      border: 1px solid #E7E7E7
+      border-radius: 10px
+      margin: 15px 7px 0 7px
+      color: #333
+      text-decoration: none
+      &:hover
+        background: rgba(136, 177, 49, 0.1)
+        border: 1px solid #88B131
+        border-radius: 10px
+        text-decoration: none
+        color: #333
+  &-color
+    &__items
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -7px
+    &__item
+      position: relative
+      z-index: 1
+      width: 48px
+      height: 48px
+      background-color: #FAFAFA
+      border: 1px solid #E7E7E7
+      border-radius: 10px
+      margin: 15px 7px 0 7px
+      color: #333
+      text-decoration: none
+      &:hover
+        background: rgba(136, 177, 49, 0.1)
+        border: 1px solid #88B131
+        border-radius: 10px
+        text-decoration: none
+        color: #333
+      span
+        position: relative
+        z-index: 2
+        display: block
+        margin: 14px
+        width: 21px
+        height: 21px
+        border-radius: 100%
+        &.red
+          background-color: red
+        &.black
+          background-color: black
+        &.yellow
+          background-color: yellow
+  &__block
+    display: flex
+    flex-wrap: wrap
+  &__price
+    flex: 0 1 300px
+    font-size: 36px
+    line-height: 30/36*100%
+    color: #88b131
+    font-weight: 700
+    margin-top: 40px
+  &__prop-count
+    font-size: 18px
+    line-height: 21/18*100%
+    color: #88b131
+    font-weight: 500
+    margin-right: 20px
+    @media ( max-width: $md4 + 'px' )
+      margin-left: 0px
+  &__count
+    display: flex
+    align-items: center
+    flex: 1 1 200px
+    margin-top: 40px
+    button
+      font-size: 18px
+      line-height: 21/18*100%
+      font-weight: 400
+      color: #88b131
+      border: none
+      background-color: #fff
+    span
+      font-size: 18px
+      line-height: 21/18*100%
+      font-weight: 400
+      color: #333
+      margin: 0 30px
+  &__btncart
+    border: none
+    margin-top: 40px
+  &__btnclick
+    border: none
+    background-color: #fff
+    margin-left: 30px
+    margin-top: 40px
+    padding: 0
+    @media ( max-width: $md4 + 'px' )
+      margin-left: 0
+      width: 270px
+  &__tabs
+    list-style-type: none
+    display: flex
+    padding: 0
+    margin: 0
+    border-bottom: 0.5px solid #999999
+    &-container
+      padding: 60px 0 0 0
+  &__tab
+    margin-right: 70px
+    font-size: 18px
+    padding-bottom: 12px
+    line-height: 21/18*100%
+    font-weight: 400
+    color: #999
+    cursor: pointer
+    @media screen and ( max-width: $md4 + 'px' )
+      margin-right: 20px
+      font-size: 14px
+    &-active
+      color: #88B131
+      font-weight: 600
+      border-bottom: 2px solid #88B131
+  &__content
+    display: none
+    margin-top: 30px
+    table
+      tr
+        td
+          width: 400px
+          padding-bottom: 30px
+          font-size: 18px
+          line-height: 28/18*100%
+          &:first-child
+            font-weight: 300
+            color: #333
+          &:last-child
+            font-weight: 700
+            color: #88b131
+    &-active
+      display: block
+  &__comments
+    padding: 30px 0 0 0
+  &__comment
+    margin-bottom: 30px
+    &-top
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+    &-name
+      font-size: 18px
+      font-weight: 600
+      margin-right: 40px
+      line-height: 28/18*100%
+      color: #88b131
+    &-date
+      font-size: 16px
+      line-height: 28/16*100%
+      font-weight: 300
+      word-spacing: nowrap
+      flex: 1 1 150px
+    &-rating
+      height: 28px
+      align-items: center
+      display: flex
+      justify-content: flex-end
+      i
+        margin: 0 5px
+        display: block
+        width: 14px
+        height: 14px
+        background: url('../images/dest/star.svg') center center no-repeat
+    &-text
+      margin-top: 15px
+      font-size: 16px
+      font-weight: 300
+      line-height: 28/16*100%
+    &:last-child
+      margin-bottom: 0
+  &__feedback
+    padding: 60px 0
+    &-title
+      font-size: 22px
+      line-height: 26/22*100%
+      font-weight: 600
+    span
+      display: flex
+      i
+        display: block
+        margin-right: 20px
+        width: 31px
+        height: 31px
+        background: url('../images/dest/star-big.svg') center center no-repeat
+    &-btn
+      margin-top: 60px
+
+.viewed
+  padding: 60px 0px
+  &__items
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+  &__column
+    margin-top: 20px
+    padding: 0 15px

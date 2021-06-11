@@ -1,0 +1,57 @@
+.contacts
+  padding: 90px 0 60px 0
+  &__row
+    display: flex
+    flex-wrap: wrap
+  &__column
+    flex: 1 1 400px
+  &__items
+    list-style-type: none
+    padding: 0
+    margin: 0
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    img
+      margin-right: 20px
+      background-color: #FACF5C
+      box-shadow: 0px 4px 25px rgba(164, 164, 164, 0.25)
+      border-radius: 20px
+      width: 40px
+      height: 40px
+      padding: 12px
+    &-info
+      flex-basis: 340px
+      flex-shrink: 1
+      flex-grow: 0
+      display: flex
+      a, span
+        font-size: 18px
+        line-height: 21/18*100%
+        font-weight: 600
+        color: #333
+        text-decoration: none
+        &:first-child
+            margin-right: 40px
+        @media ( max-width: $md4 + 'px' )
+          font-size: 12px
+          &:first-child
+            margin-right: 20px
+
+  &__social
+    display: flex
+    align-items: center
+    margin-top: 40px
+    margin-bottom: 40px
+    height: 23px
+    font-size: 18px
+    font-weight: 600
+    line-height: 21/18*100%
+    @media ( max-width: $md4 + 'px' )
+      font-size: 16px
+    img
+      margin-left: 30px
+  &__map
+    width: 100%
+    max-width: 670px

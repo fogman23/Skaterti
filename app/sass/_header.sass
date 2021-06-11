@@ -1,0 +1,401 @@
+.hamburger
+  @media ( max-width: $md4 + 'px' )
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 50px
+    height: 50px
+    margin: 3px 0
+    border-radius: 50%
+    background-color: #FACF5C
+    span
+        display: block
+        height: 2px
+        margin: 3px 0
+        width: 32px
+        background-color: #fff
+        transition: 0.5s all
+    &_active
+        span
+            margin-bottom: -2px 
+            &:nth-child(1)
+                transform: translateY(0px) rotate(-45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                transform: translateY(-3px) rotate(45deg)
+.header
+  &-top
+    position: relative
+    z-index: 5
+    height: 56px
+    background-color: #f4f3f4
+    &-menu
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &-menu__common
+      &-list
+        z-index: 10
+        position: relative
+        flex: 1 1 570px
+        height: 56px
+        padding: 0
+        margin: 0
+        list-style-type: none
+        display: flex
+        align-items: center
+        @media ( max-width: $md4 + 'px' )
+          display: flex
+          flex-direction: column
+          justify-content: center
+          right: -265px
+          position: fixed
+          top: 0
+          overflow: hidden
+          background-color: #fff
+          width: 250px
+          height: 100vh
+          text-align: center
+          transition: all 0.5s ease
+          &_active
+            right: -15px
+          .header-top-submenu__common-list
+            background-color: #fff
+            position: relative
+            padding: 0
+            margin: 0
+            width: 100%
+            font-size: 14px
+            line-height: 56/14*100%
+            font-weight: 400
+            color: #3E3F53
+            margin: 0 auto
+            box-shadow: none
+      &-item
+        text-align: center
+        word-spacing: nowrap
+        padding-right: 30px
+        @media ( max-width: $md2 + 'px' )
+          padding-right: 15px
+        @media ( max-width: $md3 + 'px' )
+          padding-right: 10px
+        @media ( max-width: $md4 + 'px' )
+          padding-right: 0px
+      &-link
+        font-size: 14px
+        line-height: 56/14*100%
+        font-weight: 400
+        color: #3E3F53
+        @media ( max-width: $md3 + 'px' )
+          font-size: 12px
+        @media ( max-width: $md4 + 'px' )
+          font-size: 18px
+        &:hover
+          color: #3E3F53
+          text-decoration: none
+        img
+          margin-left: 8px
+    &-menu__common-list > li:hover &-submenu__common-list
+      display: block
+    &-submenu__common
+      &-list
+        display: none
+        transition: all 0.3s ease
+        position: absolute
+        width: 160px
+        margin-left: -30px
+        padding: 13px 28px 28px 14px
+        background-color: #f4f3f4
+        box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
+        border-radius: 0px 0px 10px 10px
+        list-style-type: none
+      &-item
+        padding-left: 14px
+        background: url('../images/dest/right-green.svg') left center no-repeat
+      &-link
+        color: #000
+        text-decoration: none
+        &:hover
+          color: #000
+          text-decoration: none
+    &-menu__profile
+      &-list
+        flex: 0 0 230px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        list-style-type: none
+        margin: 0
+        padding: 0
+      &-item
+        &:first-child
+          padding-right: 40px
+          @media ( max-width: $md3 + 'px' )
+            padding-right: 20px
+      &-link
+        font-size: 14px
+        color: #3E3F53
+        font-weight: 700
+        text-decoration: underline
+        &:hover
+          color: #3E3F53
+      &-icon-location
+        display: inline-block
+        padding: 0px 10px
+        width: 14px
+        height: 14px
+        background: url('../images/dest/placeholder.svg') center center no-repeat
+
+  &-middle
+    position: relative
+    z-index: 4
+    &__wrapper
+      height: 98px
+      width: 100%
+      display: flex
+      align-items: center
+    &__logo
+      display: block
+      flex: 0 0 157px
+      height: 38px
+      margin-right: 40px
+      background: url('../images/dest/logo.svg') center left no-repeat
+      @media ( max-width: $md4 + 'px' )
+        display: none
+    &__services:hover &__services-container, &__services:active &__services-container
+      @media ( max-width: $md3 + 'px' )
+        display: block
+    &__services
+      z-index: 10
+      position: relative
+      display: flex
+      align-items: center
+      flex: 0 0 220px
+      margin-left: 60px
+      @media ( max-width: $md2 + 'px' )
+        margin-left: 30px
+      @media ( max-width: $md3 + 'px' )
+        flex: 0 0 20px
+        padding: 10px
+        cursor: pointer
+      @media ( max-width: $md4 + 'px' )
+        margin-left: 10px
+      &-icon
+        width: 20px
+        height: 20px
+        margin-right: 10px
+      &-container
+        @media ( max-width: $md3 + 'px' )
+          display: none
+          position: absolute
+          padding: 10px 20px
+          left: -57px
+          top: 40px
+          text-align: center
+          background-color: #fff
+          box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
+          border-radius: 10px
+          span
+            display: none
+        a
+          font-size: 18px
+          font-weight: 400
+          color: #333
+          &:hover
+            color: #333
+            text-decoration: none
+        span
+          color: #fad163
+          font-size: 20px
+          margin: 0 10px
+    &__cart
+      display: flex
+      flex: 0 1 115px
+      position: relative
+      margin-left: 30px
+      text-decoration: none
+      @media ( max-width: $md2 + 'px' )
+        flex: 0 1 40px
+      @media ( max-width: $md4 + 'px' )
+        margin-left: 10px
+      &:hover
+        text-decoration: none
+      &-count
+        width: 19px
+        height: 19px
+        border-radius: 19px
+        position: absolute
+        left: 15px
+        top: -8px
+        font-size: 8px
+        line-height: 19px
+        text-align: center
+        font-weight: 500
+        color: #333
+        background-color: #FAD163
+      &-price
+        margin-left: 15px
+        font-size: 14px
+        font-weight: 700
+        color: #88B131
+        @media ( max-width: $md2 + 'px' )
+          display: none
+
+  &-bottom
+    position: relative
+    z-index: 3
+    height: 60px
+    width: 100%
+    background-color: #FACF5C
+    &__menu-list > li:hover &__submenu-list
+      display: block
+    &__menu-list-mobile > li:hover &__submenu-list-mobile
+      display: block
+    &__submenu-list-mobile > li:hover &__sub-submenu-list-mobile
+      display: block
+    &__menu
+      height: 60px
+      display: flex
+      width: 100%
+      &-list
+        list-style-type: none
+        display: flex
+        width: 100%
+        height: 60px
+        padding: 0
+        margin: 0
+        justify-content: space-between
+        align-items: center
+        @media ( max-width: $md3 + 'px' )
+          display: none
+      &-item:first-child > &-link
+        font-size: 20px
+        line-height: 60/20*100%
+        @media ( max-width: $md2 + 'px' )
+          font-size: 18px
+          line-height: 60/18*100%
+      &-link
+        font-size: 16px
+        line-height: 60/16*100%
+        font-weight: 500
+        color: #333
+        @media ( max-width: $md2 + 'px' )
+          font-size: 14px
+          line-height: 60/14*100%
+        img
+          padding-left: 5px
+        &:hover
+          color: #333
+          text-decoration: none
+      &-list-mobile
+        display: none
+        list-style-type: none
+        padding: 0
+        margin: 0
+        @media ( max-width: $md3 + 'px' )
+          display: block
+    &__submenu
+      &-list
+        display: none
+        transition: all 0.3s ease
+        position: absolute
+        width: 230px
+        margin-left: -30px
+        padding: 15px
+        background-color: #FACF5C
+        box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
+        border-radius: 0px 0px 10px 10px
+        list-style-type: none
+      &-item
+        padding-left: 14px
+        background: url('../images/dest/right-white.svg') left center no-repeat
+      &-link
+        font-size: 12px!important
+        line-height: 14px
+        font-weight: 500
+        font-size: 12px
+        line-height: 14/12*100%
+        padding: 7px 0px
+        color: #333
+        text-decoration: none
+        &:hover
+          color: #333
+          text-decoration: none
+      &-list-mobile
+        position: relative
+        display: none
+        list-style-type: none
+        padding: 15px 0 15px 15px
+        width: 230px
+        margin: 0
+        background-color: #FACF5C
+        box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
+        border-radius: 0px 0px 10px 10px
+        margin-left: -15px
+        >li
+          background: none
+          img
+            padding-left: 5px
+    &__sub-submenu
+      &-list-mobile
+        display: none
+        list-style-type: none
+        padding: 15px
+        position: absolute
+        top: 0
+        left: 230px
+        width: 230px
+        background-color: #FACF5C
+        box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
+        border-radius: 0px 0px 10px 0px
+      &-item
+        padding-left: 14px
+        background: url('../images/dest/right-white.svg') left center no-repeat
+      &-link
+        font-size: 12px!important
+        line-height: 14px
+        font-weight: 500
+        font-size: 12px
+        line-height: 14/12*100%
+        padding: 7px 0px
+        color: #333
+        text-decoration: none
+        &:hover
+          color: #333
+          text-decoration: none
+
+.search-form
+  position: relative
+  flex: 1 1 180px
+  &__input
+    width: 100%
+    height: 48px
+    border: 1px solid #fad163
+    border-radius: 50px
+    padding: 0 30px
+    text-align: left
+    font-weight: 300
+    font-size: 16px
+    color: #c4c4c4
+    @media ( max-width: $md3 + 'px' )
+      padding: 0 20px
+      font-size: 14px
+  &__button
+    position: absolute
+    top: 16px
+    right: 30px
+    width: 0px
+    height: 0px
+    border: none
+    background-color: #fff
+    &:before
+      content: ''
+      width: 17px
+      height: 17px
+      position: absolute
+      background-image: url('../images/dest/search.svg')
+    
+    

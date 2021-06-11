@@ -1,0 +1,49 @@
+.certificates
+  padding: 0 0 60px 0
+  &__items
+    padding-top: 20px
+    margin: 0 -15px
+    display: flex
+    /* Ограничивающая оболочка */
+    .slick-list
+      overflow: hidden
+    /* Лента слайдов */
+    .slick-track
+      display: flex
+    /* Стрелка влево */
+    .slick-arrow.slick-prev
+      position: absolute
+      top: 35px
+      right: 70px
+      border: none
+      background: none
+      font-size: 0
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 23px
+        height: 8px
+        background-image: url('../images/dest/arrow-popular-left.svg')
+    /* Стрелка вправо */
+    .slick-arrow.slick-next
+      position: absolute
+      top: 35px
+      right: 20px
+      border: none
+      background: none
+      font-size: 0
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 23px
+        height: 8px
+        background-image: url('../images/dest/arrow-popular-right.svg')
+  &__column
+    flex: 0 1 270px
+    padding: 0 15px

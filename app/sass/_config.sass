@@ -1,0 +1,74 @@
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap')
+
+// USER VARIABLES SECTION
+
+$accent: #FAD163 // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$roboto: Roboto, sans-serif // Roboto Font Family
+$raleway: Raleway, sans-serif // Raleway Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap
+		src: local($fname), url($furl) format('woff2')
+
+
+@include font('Roboto', normal, 100, '../fonts/Roboto-Thin.woff2')
+@include font('Roboto', italic, 100, '../fonts/Roboto-ThinItalic.woff2')
+@include font('Roboto', normal, 300, '../fonts/Roboto-Light.woff2')
+@include font('Roboto', italic, 300, '../fonts/Roboto-LightItalic.woff2')
+@include font('Roboto', normal, 400, '../fonts/Roboto-Regular.woff2')
+@include font('Roboto', italic, 400, '../fonts/Roboto-Italic.woff2')
+@include font('Roboto', normal, 500, '../fonts/Roboto-Medium.woff2')
+@include font('Roboto', italic, 500, '../fonts/Roboto-MediumItalic.woff2')
+@include font('Roboto', normal, 700, '../fonts/Roboto-Bold.woff2')
+@include font('Roboto', italic, 700, '../fonts/Roboto-BoldItalic.woff2')
+@include font('Roboto', normal, 900, '../fonts/Roboto-Black.woff2')
+@include font('Roboto', italic, 900, '../fonts/Roboto-BlackItalic.woff2')
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $raleway
+	font-size: $fontsize
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	color: $textcolor
+
+

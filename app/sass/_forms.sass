@@ -1,0 +1,109 @@
+.label__row
+  margin: 0 -15px
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+.label
+  position: relative
+  padding: 0 15px
+  font-size: 14px
+  line-height: 28/14*100%
+  font-weight: 400
+  display: block
+  label
+    margin-bottom: 5px
+    display: block
+  &-s
+    flex: 0 1 270px
+    @media ( max-width: $md4 + 'px' )
+      flex: 0 1 100%
+  &-m
+    flex: 0 1 370px
+    @media ( max-width: $md3 + 'px' )
+      flex: 0 1 100%
+  &-b
+    flex: 0 1 100%
+.input
+  height: 62px
+  border: 1px solid #E7E7E7
+  border-radius: 50px
+  padding: 0 30px
+  text-align: center
+  &-s
+    width: 270px
+    @media ( max-width: $md4 + 'px' )
+      width: 100%
+  &-m
+    width: 370px
+    @media ( max-width: $md3 + 'px' )
+      width: 100%
+  &-b
+    width: 100%
+    text-align: left
+  &-edit
+    display: block
+    position: absolute
+    right: 38px
+    top: 56px
+    width: 16px
+    height: 16px
+    cursor: pointer
+    background: url('../images/dest/edit.svg') center center no-repeat
+
+form
+  label
+    font-size: 14px
+    line-height: 28/14*100%
+    font-weight: 400
+    margin-bottom: 0
+  input
+    height: 62px
+    border: 1px solid #E7E7E7
+    border-radius: 50px
+    padding: 0 30px
+    margin-bottom: 0
+    text-align: center
+  textarea
+    resize: none
+    border: 1px solid #E7E7E7
+    border-radius: 15px
+    padding: 15px 30px
+    height: 200px
+    width: 100%
+  input[type="radio"], 
+  input[type="checkbox"]
+    position: absolute
+    z-index: -1
+    left: -9999px
+  input[type="radio"] + label, 
+  input[type="checkbox"] + label
+    display: inline-block
+    position: relative
+    height: 21px
+    padding-left: 25px
+    margin-bottom: 0
+    font-size: 18px
+    line-height: 21/18*100%
+    font-weight: 400
+    cursor: pointer
+    @media ( max-width: $md2 + 'px' )
+      width: 100%
+  input[type="radio"] + label:before, 
+  input[type="checkbox"] + label:before
+    content: ''
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    transition: all 0.5s ease
+    left: 0
+    width: 14px
+    height: 14px
+    border: 0.5px solid #C1C1C1
+    border-radius: 2px
+  input[type="radio"]:checked + label:before, 
+  input[type="checkbox"]:checked + label:before
+    border-color: #88B131
+    background: url('../images/dest/check.svg') center/70% no-repeat
+  input[type="radio"]:not(:checked) + label:hover:before,
+  input[type="checkbox"]:not(:checked) + label:hover:before
+    border-color: #88B131

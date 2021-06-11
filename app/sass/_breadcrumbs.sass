@@ -1,0 +1,29 @@
+.breadcrumbs
+  margin-top: 30px
+  &__list
+    list-style-type: none
+    display: flex
+    padding: 0
+    margin: 0
+  &__item
+    position: relative
+    font-size: 14px
+    line-height: 16/14*100%
+    font-weight: 500
+    margin-right: 50px
+    &-active
+      color: #88B131
+      font-weight: 600
+    a
+      color: #333
+      text-decoration: none
+  &__item:after
+    content: ''
+    position: absolute
+    background: url('../images/dest/arrow-breadcrumbs.svg') center center no-repeat
+    width: 11px
+    height: 16px
+    top: 0
+    right: -30px
+  &__item:last-child:after
+    display: none

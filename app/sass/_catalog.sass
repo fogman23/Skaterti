@@ -1,0 +1,135 @@
+// Диапазон цен
+.irs--flat.irs-with-grid
+  height: 51px
+.irs-with-grid .irs-grid, .irs-min, .irs-max
+  display: none
+.irs--flat .irs-line
+  top: 7px
+  height: 1px
+  background-color: #999
+  border-radius: none
+.irs--flat .irs-handle
+  top: 0
+  width: 16px
+  height: 16px
+  border-radius: 50%
+  background-color: #88B131
+  i:first-child
+    display: none
+.irs--flat .irs-bar
+  top: 7px
+  height: 1px
+  background-color: #88B131
+.irs--flat .irs-from, .irs--flat .irs-to
+  font-size: 14px
+  padding: 5px 0
+  text-align: center
+  height: 25px
+  width: 70px
+  font-weight: 600
+  background-color: #F3F3F3
+  line-height: 16/14*100%
+  color: #88B131
+  top: 25px
+  left: 0!important
+  visibility: visible!important
+  &:before
+    display: none
+.irs--flat .irs-to
+  left: 200px!important
+.irs--flat .irs-single
+  display: none
+// Диапазон цен
+
+.catalog
+  padding: 40px 0 60px 0
+  &__row
+    display: flex
+    margin: 0 -15px
+    @media ( max-width: $md4 + 'px' )
+      flex-wrap: wrap
+  &__column
+    display: flex
+    flex-direction: column
+    padding: 0 15px
+    &-sidebar
+      flex: 0 0 25%
+      @media ( max-width: $md4 + 'px' )
+        flex: 1 0 320px
+    &-products
+      flex: 0 1 75%
+      @media ( max-width: $md4 + 'px' )
+        margin-top: 30px
+        flex: 1 0 320px
+  .category, .price, .size
+    margin-bottom: 30px
+    &-title
+      font-size: 16px
+      line-height: 19/16*100%
+      color: #88B131
+      font-weight: 600
+      margin-bottom: 15px
+    label
+      height: 14px
+      width: 255px
+      font-size: 12px
+      line-height: 14/12*100%
+      margin-bottom: 15px
+  .product__items
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+  .product__column
+    margin: 0 15px 15px 15px
+    @media ( max-width: $md3 + 'px' )
+      margin: 0 auto 15px auto
+  .sort
+    display: flex
+    flex: 1 1 25px
+    flex-wrap: wrap
+    align-items: center
+    margin-bottom: 30px
+    &-title
+      font-size: 16px
+      line-height: 19/16*100%
+      font-weight: 600
+      margin-right: 20px
+    &__list
+      display: flex
+      flex-wrap: wrap
+      list-style-type: none
+      padding: 0
+      margin: 0
+    &__item
+      margin-right: 30px
+      a
+        font-size: 12px
+        line-height: 14/12*100%
+        color: #737373
+        text-decoration: none
+        font-weight: 400
+    &__item-active
+      a
+        color: #88B131
+        text-decoration: underline
+  .pagination
+    margin: 60px 0 0 0
+    padding: 0
+    list-style-type: none
+    display: flex
+    align-items: center
+    justify-content: center
+    &-item
+      margin: 0 13px
+      line-height: 23/20*100%
+      a
+        font-size: 20px
+        line-height: 23/20*100%
+        font-weight: 600
+        color: #333
+        text-decoration: none
+      &-active
+        a
+          font-size: 28px
+  .btn-more
+    margin: 30px auto 0 auto

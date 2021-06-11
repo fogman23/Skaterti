@@ -1,0 +1,62 @@
+.callback
+  position: relative
+  overflow: hidden
+  margin-top: 60px
+  padding: 20px 0
+  background-color: #FAD163
+  &-bg
+    z-index: 1
+    position: absolute
+    bottom: -20px
+    right: -60px
+  &-title
+    font-size: 26px
+    line-height: 52/26*100%
+    font-weight: 600
+    color: #333
+  &-descr
+    font-size: 16px
+    line-height: 22/16*100%
+    font-weight: 600
+    color: #333
+  &-text
+    font-size: 14px
+    line-height: 28/14*100%
+    color: #333
+    font-weight: 500
+  &-form
+    position: relative
+    z-index: 2
+    display: flex
+    justify-content: space-between
+    margin: 20px -15px 20px -15px
+    @media ( max-width: $md3 + 'px' )
+      flex-wrap: wrap
+    input
+      flex: 0 1 33.333%
+      margin: 0 15px
+      padding: 20px
+      font-size: 16px
+      border: none
+      border-radius: 50px
+      text-align: center
+      line-height: 22/16*100%
+      font-weight: 400
+      color: #999
+      @media ( max-width: $md3 + 'px' )
+        flex: 0 1 100%
+        margin-bottom: 10px
+    &-btn
+      background-color: #3E3F53
+      color: #fff
+      flex: 0 1 33.333%
+      margin: 0 15px
+      padding: 20px
+      font-size: 16px
+      border: none
+      border-radius: 50px
+      text-align: center
+      line-height: 22/16*100%
+      font-weight: 400
+      @media ( max-width: $md3 + 'px' )
+        flex: 0 1 100%

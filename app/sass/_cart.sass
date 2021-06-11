@@ -1,0 +1,128 @@
+.cart
+  padding: 30px 0 120px 0
+  &__items
+    padding: 30px 0 80px 0
+    @media ( max-width: $md3 + 'px' )
+      display: flex
+      flex-wrap: wrap
+  &__item
+    position: relative
+    background: #FFFFFF
+    box-shadow: 0px 0px 35px rgba(28, 94, 189, 0.05)
+    border-radius: 15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 182px
+    padding: 0px 88px 0px 63px
+    margin-bottom: 20px
+    @media ( max-width: $md2 + 'px' )
+      padding: 0px 44px 0px 31px
+    @media ( max-width: $md3 + 'px' )
+      flex-direction: column
+      height: 450px
+      width: 215px
+      padding: 30px 15px
+      margin: 15px
+    @media ( max-width: $md4 + 'px' )
+      width: 100%
+    &-image
+      display: block
+      width: 140px
+      height: 140px
+      object-fit: cover
+      overflow: hidden
+    &-block
+      width: 230px
+      @media ( max-width: $md3 + 'px' )
+        width: 140px
+    &-title
+      display: block
+      margin-bottom: 10px
+      font-size: 18px
+      text-decoration: none
+      color: #333
+      font-weight: 500
+      line-height: 21/18*100%
+      &:hover
+        text-decoration: none
+        color: #333
+      @media ( max-width: $md3 + 'px' )
+        text-align: center
+    &-size
+      font-size: 10px
+      line-height: 12/10*100%
+      color: #333
+      font-weight: 400
+      @media ( max-width: $md3 + 'px' )
+        text-align: center
+    &-price
+      display: block
+      color: #88B131
+      font-size: 24px
+      font-weight: 600
+      span
+        font-size: 18px
+        font-weight: 600
+    &-count
+      font-size: 18px
+      color: #333
+      span
+        margin: 0 20px
+      button
+        background: none
+        border: none
+        color: #88B131
+    &-close
+      position: absolute
+      background-color: #D75A4A
+      width: 32px
+      height: 32px
+      border-radius: 50%
+      transition: background-color 0.3s ease
+      right: -5px
+      top: -9px
+      cursor: pointer
+      &:hover
+        background-color: #88B131
+      span
+        display: block
+        position: relative
+        width: 15px
+        height: 2px
+        background-color: #fff
+      span:nth-child(1)
+        top: 15px
+        left: 8.5px
+        transform: rotate(45deg)
+      span:nth-child(2)
+        top: 13px
+        left: 8.5px
+        transform: rotate(-45deg)
+  &__order
+    display: flex
+    justify-content: flex-end
+    @media ( max-width: $md4 + 'px' )
+      flex-wrap: wrap
+      justify-content: center
+    &-total
+      font-size: 24px
+      line-height: 30/24*100%
+      font-weight: 500
+    &-price
+      margin-top: 5px
+      font-size: 36px
+      line-height: 30/36*100%
+      font-weight: 700
+      color: #88B131
+      span
+        font-size: 28px
+        line-height: 30/28*100%
+        font-weight: 700
+        color: #88B131
+  &__btn
+    margin-left: 30px
+    @media ( max-width: $md4 + 'px' )
+      margin-left: 0
+      margin-top: 30px
+

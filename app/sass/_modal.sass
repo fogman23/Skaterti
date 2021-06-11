@@ -1,0 +1,189 @@
+.overlay
+  z-index: 10
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  background-color: #F2F2F2
+  top: 0
+
+.modal
+  z-index: 11
+  display: none
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background: #FFFFFF
+  box-shadow: 0px 0px 25px rgba(212, 212, 212, 0.25)
+  border-radius: 10px
+  &-form
+    margin-top: 10px
+    &__text
+      font-size: 14px
+      line-height: 16/14*100%
+      text-align: center
+      font-weight: 400
+      margin-top: 15px
+    &__link
+      display: block
+      font-size: 13px
+      line-height: 28/13*100%
+      font-weight: 400
+      margin: 20px auto
+      text-align: center
+      color: #88B131
+      &:hover
+        color: #FACF5C
+  &__title
+    font-size: 26px
+    font-weight: 600
+    line-height: 31 / 26 * 100%
+    text-align: center
+  &__close
+    position: absolute
+    top: 17px
+    right: 27px
+    font-size: 40px
+    line-height: 20px
+    color: #88B131
+    cursor: pointer
+  &__image
+    position: relative
+    margin: 0 auto
+    width: 114px
+    height: 114px
+    background-color: #fff
+    box-shadow: 0px 0px 10px rgba(188, 188, 188, 0.25)
+    border-radius: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 10px
+      width: 26px
+      height: 26px
+      background: url('../images/dest/success-check.svg')
+  &__text
+    margin-top: 26px
+    font-size: 18px
+    font-weight: 500
+    width: 270px
+    line-height: 30/18*100%
+    margin: 0 auto
+    margin-top: 25px
+    text-align: center
+
+.modal__success, .modal-callback
+  width: 465px
+  height: 509px
+  padding: 140px 0
+  @media screen and ( max-width: $md4 + 'px'  )
+    width: 95%
+
+.modal-entry, .modal-registration
+  width: 465px
+  min-height: 544px
+  padding: 60px 47px
+  text-align: center
+  @media screen and ( max-width: $md4 + 'px'  )
+    width: 95%
+    padding: 20px 15px
+    min-height: 320px
+    form
+      input
+        height: 42px
+      label
+        margin-top: 15px
+
+.modal-quickorder
+  width: 630px
+  height: 945px
+  padding: 60px 30px
+  text-align: center
+  @media screen and ( max-width: $md4 + 'px'  )
+    overflow-y: scroll
+    width: 95%
+    height: 95%
+    padding: 30px 15px
+    form
+      input
+        height: 42px
+      label
+        margin-top: 15px
+  textarea
+    height: 129px
+
+.modal__order
+  width: 630px
+  height: 674px
+  padding: 60px 30px
+  @media screen and ( max-width: $md4 + 'px'  )
+    overflow-y: scroll
+    width: 95%
+    height: 538px
+    padding: 40px 15px
+.order
+  &__items
+    margin: 40px 0 60px 0
+    height: 358px
+    @media screen and ( max-width: $md4 + 'px'  )
+      margin: 20px 0px 30px 0px
+      height: 310px
+      
+    /* Ограничивающая оболочка */
+    .slick-list
+      overflow: hidden
+    /* Лента слайдов */
+    .slick-track
+      display: block
+    /* Стрелка влево */
+  &__item
+    display: flex
+    align-items: flex-start
+    height: 194px
+    width: 547px
+    &:first-child
+      margin-top: 0
+    @media screen and ( max-width: $md4 + 'px'  )
+      flex-direction: column
+      height: 310px
+      width: 100%
+      margin-top: 0
+    &-image
+      margin-right: 30px
+      width: 170px
+      height: 164px
+      @media screen and ( max-width: $md4 + 'px'  )
+        margin: 0px auto 30px auto
+    &-info
+      width: 350px
+      text-align: left
+      padding: 17px 0
+      @media screen and ( max-width: $md4 + 'px'  )
+        width: 100%
+        text-align: center
+        height: auto
+        padding: 0
+        flex-shrink: 0
+    &-title
+      font-size: 24px
+      line-height: 28/24*100%
+      font-weight: 500
+      @media screen and ( max-width: $md4 + 'px'  )
+        font-size: 18px
+    &-size
+      margin-top: 10px
+      font-size: 14px
+      line-height: 16/14*100%
+      font-weight: 400
+    &-price
+      margin-top: 20px
+      font-size: 24px
+      line-height: 28/24*100%
+      color: #88B131
+      font-weight: 600
+

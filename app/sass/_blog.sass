@@ -1,0 +1,80 @@
+.blog
+  padding: 60px 0px
+  &-all
+    position: absolute
+    top: 0
+    right: 15px
+    line-height: 52/16*100%
+    font-size: 16px
+    font-weight: 500
+    color: #88b131
+    text-decoration: underline
+    &:hover
+      color: #88b131
+  &__row
+    margin: 20px -15px 0 -15px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  &__column
+    margin: 0 15px
+    flex: 0 1 270px
+  &__item
+    height: 320px
+    &-image
+      border-radius: 10px
+    &-title
+      margin-top: 15px
+      font-size: 18px
+      line-height: 24/18*100%
+      color: #333
+      font-weight: 400
+    &-text
+      margin-top: 10px
+      font-size: 12px
+      line-height: 22/12*100%
+      color: #333
+    &-info
+      display: flex
+      justify-content: space-between
+      margin-top: 5px
+    &-date
+      font-size: 8px
+      line-height: 22/8*100%
+      color: #333
+    &-link
+      padding-right: 10px
+      font-size: 8px
+      line-height: 22/8*100%
+      color: #88b131
+      text-decoration: underline
+      background: url('../images/dest/Arrow-green.png') right center no-repeat
+      &:hover
+        color: #88b131
+.blog-page
+  padding: 30px 0 120px 0
+  .blog__column
+    margin-bottom: 30px   
+  &-link
+    display: inline-block
+    margin: 0 30px 40px 0
+    width: 270px
+    height: 65px
+    font-size: 20px
+    line-height: 65/20*100%
+    text-align: center
+    transition: border 0.5s ease
+    font-weight: 500
+    box-shadow: 0px 0px 25px rgba(213, 213, 213, 0.25)
+    border-radius: 10px
+    text-decoration: none
+    color: #333
+    @media ( max-width: $md3 + 'px' )
+      width: 180px
+      margin: 0 15px 20px 0
+    &-active
+      border: 1px solid rgba(136, 177, 49, 0.5)
+    &:hover
+      color: #333
+      text-decoration: none
+
