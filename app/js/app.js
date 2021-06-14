@@ -48,21 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".header-top-menu__city-selection").slideToggle(400);
 	});
 
-	$('.header-top-menu__common-item:nth-child(2)').hover(function () {
-		$('.header-top-submenu__common-list').slideToggle(400);
-	});
+	if($('body').hasClass('mouse')){
+		$('.header-top-menu__common-item:nth-child(2)').hover(function () {
+			$('.header-top-submenu__common-list').slideToggle(400);
+		});
+	}
 
 	$('.header-bottom__menu-item:nth-child(2)').hover(function () {
 		$('.header-bottom__submenu-list').slideToggle(400);
 	});
-
-/* 	$('.header-bottom__menu-list-mobile>.header-bottom__menu-item:first-child').hover(function () {
-		$('.header-bottom__submenu-list-mobile').slideToggle(400);
-	});
-
-	$('.header-bottom__submenu-item:first-child').hover(function () {
-		$('.header-bottom__sub-submenu-list-mobile').slideToggle(400);
-	}); */
 
 	if ($(window).width() < 768) {
 		$('.header-middle__services').hover(function () {

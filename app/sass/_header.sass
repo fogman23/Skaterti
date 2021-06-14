@@ -92,6 +92,9 @@
         &:hover
           svg
             transform: rotate(90deg)
+        .arrow.active
+          svg
+            transform: rotate(90deg)
       &-link
         font-size: 14px
         line-height: 56/14*100%
@@ -107,6 +110,8 @@
         img
           margin-left: 8px
     &-submenu__common
+      &-list.open
+        display: block
       &-list
         display: none
         position: absolute
