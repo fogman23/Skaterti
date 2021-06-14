@@ -84,6 +84,14 @@
           padding-right: 10px
         @media ( max-width: $md4 + 'px' )
           padding-right: 0px
+        svg
+          transition: all 0.5s ease
+          margin-left: 8px
+          @media ( max-width: $md4 + 'px' )
+            margin-left: 20px
+        &:hover
+          svg
+            transform: rotate(90deg)
       &-link
         font-size: 14px
         line-height: 56/14*100%
@@ -98,12 +106,9 @@
           text-decoration: none
         img
           margin-left: 8px
-    &-menu__common-list > li:hover &-submenu__common-list
-      display: block
     &-submenu__common
       &-list
         display: none
-        transition: all 0.3s ease
         position: absolute
         width: 160px
         margin-left: -30px
@@ -123,6 +128,7 @@
           text-decoration: none
     &-menu__profile
       &-list
+        position: relative
         flex: 0 0 230px
         display: flex
         justify-content: flex-end
@@ -148,6 +154,33 @@
         width: 14px
         height: 14px
         background: url('../images/dest/placeholder.svg') center center no-repeat
+    &-menu__city-selection
+      display: none
+      padding: 11px 8px 17px 8px
+      width: 160px
+      background: #F4F3F4
+      box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
+      border-radius: 0px 0px 10px 10px
+      position: absolute
+      top: 41px
+      margin-left: -15px
+      ul 
+        list-style-type: none
+        padding-left: 17px
+        li
+          margin-top: 13px
+        a
+          font-size: 12px
+          line-height: 14 / 12*100%
+          color: #000
+          font-weight: 400
+          &:hover
+            text-decoration: none
+        li:first-child
+          margin-top: 14px
+          a
+            font-weight: 700
+            text-decoration: underline
 
   &-middle
     position: relative
@@ -165,9 +198,6 @@
       background: url('../images/dest/logo.svg') center left no-repeat
       @media ( max-width: $md4 + 'px' )
         display: none
-    &__services:hover &__services-container, &__services:active &__services-container
-      @media ( max-width: $md3 + 'px' )
-        display: block
     &__services
       z-index: 10
       position: relative
@@ -250,16 +280,27 @@
     height: 60px
     width: 100%
     background-color: #FACF5C
-    &__menu-list > li:hover &__submenu-list
-      display: block
-    &__menu-list-mobile > li:hover &__submenu-list-mobile
-      display: block
-    &__submenu-list-mobile > li:hover &__sub-submenu-list-mobile
-      display: block
     &__menu
       height: 60px
       display: flex
       width: 100%
+      &-list-mobile
+        display: none
+        list-style-type: none
+        padding: 0
+        margin: 0
+        @media ( max-width: $md3 + 'px' )
+          display: block
+        >li
+          .arrow 
+            svg
+              transition: all 0.5s ease
+              margin-left: 15px
+            &.active
+              svg
+                transform: rotate(90deg)
+          a
+            font-size: 20px
       &-list
         list-style-type: none
         display: flex
@@ -271,6 +312,13 @@
         align-items: center
         @media ( max-width: $md3 + 'px' )
           display: none
+        >li
+          svg
+            transition: all 0.5s ease
+            margin-left: 4px
+          &:hover
+            svg
+              transform: rotate(90deg)
       &-item:first-child > &-link
         font-size: 20px
         line-height: 60/20*100%
@@ -290,67 +338,46 @@
         &:hover
           color: #333
           text-decoration: none
-      &-list-mobile
-        display: none
-        list-style-type: none
-        padding: 0
-        margin: 0
-        @media ( max-width: $md3 + 'px' )
-          display: block
+
     &__submenu
-      &-list
-        display: none
-        transition: all 0.3s ease
-        position: absolute
-        width: 230px
-        margin-left: -30px
-        padding: 15px
-        background-color: #FACF5C
-        box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
-        border-radius: 0px 0px 10px 10px
-        list-style-type: none
-      &-item
-        padding-left: 14px
-        background: url('../images/dest/right-white.svg') left center no-repeat
-      &-link
-        font-size: 12px!important
-        line-height: 14px
-        font-weight: 500
-        font-size: 12px
-        line-height: 14/12*100%
-        padding: 7px 0px
-        color: #333
-        text-decoration: none
-        &:hover
-          color: #333
-          text-decoration: none
       &-list-mobile
         position: relative
         display: none
         list-style-type: none
         padding: 15px 0 15px 15px
-        width: 230px
+        width: 290px
         margin: 0
         background-color: #FACF5C
         box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
         border-radius: 0px 0px 10px 10px
         margin-left: -15px
+        a
+          font-size: 18px!important
+          line-height: 45/18*100%
         >li
           background: none
           img
             padding-left: 5px
-    &__sub-submenu
-      &-list-mobile
+          .arrow 
+            svg
+              transition: all 0.5s ease
+              margin-left: 15px
+            &.active
+              svg
+                transform: rotate(90deg)
+      &-list-mobile.open
+        display: block
+      
+      &-list
         display: none
-        list-style-type: none
-        padding: 15px
         position: absolute
-        top: 0
-        left: 230px
         width: 230px
+        margin-left: -20px
+        padding: 15px 10px
         background-color: #FACF5C
         box-shadow: 0px 5px 15px rgba(124, 124, 124, 0.15)
-        border-radius: 0px 0px 10px 0px
+        border-radius: 0px 0px 10px 10px
+        list-style-type: none
       &-item
         padding-left: 14px
         background: url('../images/dest/right-white.svg') left center no-repeat
@@ -366,6 +393,29 @@
         &:hover
           color: #333
           text-decoration: none
+        
+    &__sub-submenu
+      &-list-mobile.open
+        display: block
+      &-list-mobile
+        display: none
+        list-style-type: none
+        padding: 0
+        width: 290px
+      &-item
+        padding-left: 14px
+        background: url('../images/dest/right-white.svg') left center no-repeat
+      &-link
+        font-size: 16px!important
+        font-weight: 500
+        line-height: 40/16*100%
+        padding: 7px 0px
+        color: #333
+        text-decoration: none
+        &:hover
+          color: #333
+          text-decoration: none
+        
 
 .search-form
   position: relative
