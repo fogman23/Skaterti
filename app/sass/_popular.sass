@@ -1,8 +1,7 @@
 .popular
-  padding: 60px 0px
+  padding: 60px 0px 40px 0px
   &__items
     position: relative
-    padding-top: 20px
     min-width: 0
     display: flex
     margin: 0 -15px
@@ -20,7 +19,7 @@
       border: none
       background: none
       font-size: 0
-      &::before
+      &:before
         content: ''
         position: absolute
         top: 50%
@@ -47,12 +46,17 @@
         height: 8px
         background-image: url('../images/dest/arrow-popular-right.svg')
   &__column
-    margin: 0 15px
+    width: 270px
+    padding: 20px 15px
+    &[aria-hidden="true"]
+      .product
+        box-shadow: none
 .product
   width: 270px
   display: flex
   flex-direction: column
   background: #FFFFFF
+  transition: 0.5s
   box-shadow: 0px 0px 25px rgba(213, 213, 213, 0.25)
   border-radius: 10px
   padding: 20px
@@ -84,12 +88,16 @@
   &-price
     color: #88B131
     font-size: 24px
+    line-height: 28/24*100%
     font-weight: 600
     span
       font-size: 18px
+      line-height: 21/18*100%
       font-weight: 600
   &-count
     font-size: 18px
+    line-height: 21/18*100%
+    font-weight: 400
     color: #333
     span
       margin: 0 20px

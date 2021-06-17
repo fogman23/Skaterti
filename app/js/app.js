@@ -48,18 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
 		$(".header-top-menu__city-selection").slideToggle(400);
 	});
 
-	if($('body').hasClass('mouse')){
-		$('.header-top-menu__common-item:nth-child(2)').hover(function () {
-			$('.header-top-submenu__common-list').slideToggle(400);
+	if ($('body').hasClass('mouse')) {
+		$('.header-top-menu__common-list').find('> li').hover(function () {
+			$('.header-top-menu__common-list > li').not(this).find('ul').slideUp;
+			$(this).find('ul').stop(true, true).slideToggle(400);
 		});
-	}
-
-	$('.header-bottom__menu-item:nth-child(2)').hover(function () {
-		$('.header-bottom__submenu-list').slideToggle(400);
-	});
-
-	if ($(window).width() < 768) {
-		$('.header-middle__services').hover(function () {
+		$('.header-bottom__menu-list').find('> li').hover(function () {
+			$('.header-bottom__menu-list > li').not(this).find('ul').slideUp;
+			$(this).find('ul').stop(true, true).slideToggle(400);
+		});
+	} else {
+		$('.header-top-menu__common-list').find('> li').click(function () {
+			$('.header-top-menu__common-list > li').not(this).find('ul').slideUp;
+			$(this).find('ul').stop(true, true).slideToggle(400);
+		});
+		$('.header-bottom__menu-list').find('> li').click(function () {
+			$('.header-bottom__menu-list > li').not(this).find('.ul').slideUp;
+			$(this).find('.ul').stop(true, true).slideToggle(400);
+		});
+		$('.header-middle__services').click(function () {
 			$('.header-middle__services-container').slideToggle(400);
 		});
 	}
@@ -80,13 +87,26 @@ document.addEventListener("DOMContentLoaded", function () {
 		speed: 500,
 		slidesToShow: 4,
 		slidesToScroll: 1,
-		variableWidth: true,
 		responsive: [{
-			breakpoint: 768,
-			settings: {
-				arrows: false,
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					arrows: false,
+					slidesToShow: 1,
+				}
 			}
-		}]
+		]
 	});
 
 	$('.certificates__items').slick({

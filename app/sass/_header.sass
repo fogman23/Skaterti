@@ -110,8 +110,6 @@
         img
           margin-left: 8px
     &-submenu__common
-      &-list.open
-        display: block
       &-list
         display: none
         position: absolute
@@ -318,12 +316,16 @@
         @media ( max-width: $md3 + 'px' )
           display: none
         >li
-          svg
-            transition: all 0.5s ease
-            margin-left: 4px
           &:hover
+              svg
+                transform: rotate(90deg)
+          .arrow 
             svg
-              transform: rotate(90deg)
+              transition: all 0.5s ease
+              margin-left: 4px
+            &.active
+              svg
+                transform: rotate(90deg)
       &-item:first-child > &-link
         font-size: 20px
         line-height: 60/20*100%
@@ -345,11 +347,17 @@
           text-decoration: none
 
     &__submenu
+      &-list-mobile.open
+        left: 0
+        transition: all 0.5s ease
       &-list-mobile
-        position: relative
-        display: none
+        left: -100%
+        top: 60px
+        transition: all 0.5s ease
+        position: absolute
+        display: block
         list-style-type: none
-        padding: 15px 0 15px 15px
+        padding: 0 15px
         width: 290px
         margin: 0
         background-color: #FACF5C
@@ -370,8 +378,6 @@
             &.active
               svg
                 transform: rotate(90deg)
-      &-list-mobile.open
-        display: block
       
       &-list
         display: none
@@ -401,12 +407,17 @@
         
     &__sub-submenu
       &-list-mobile.open
-        display: block
+        left: 30px
+        transition: all 0.5s ease
       &-list-mobile
-        display: none
+        left: -100%
+        transition: all 0.5s ease
+        display: block
+        position: absolute
         list-style-type: none
+        background-color: #FACF5C
         padding: 0
-        width: 290px
+        width: auto
       &-item
         padding-left: 14px
         background: url('../images/dest/right-white.svg') left center no-repeat
